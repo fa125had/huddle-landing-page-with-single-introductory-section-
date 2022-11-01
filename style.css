@@ -156,6 +156,7 @@ body .container footer .socials svg:hover {
   }
   body .container .contentBox .landingIllustration {
     width: 80%;
+    background: url(./images/illustration-mockups.svg) center no-repeat;
   }
   body .container .contentBox .content {
     text-align: center;
