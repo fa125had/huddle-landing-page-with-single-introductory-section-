@@ -75,6 +75,8 @@ body .container .contentBox .content button {
 body .container .contentBox .content button:hover {
   cursor: pointer;
   box-shadow: -0.5rem -0.5rem 1rem #000;
+  background-color: hsl(300deg, 69%, 71%);
+  color: #fff;
 }
 body .container footer {
   width: 87%;
@@ -91,6 +93,8 @@ body .container footer .attribution {
 }
 body .container footer .attribution a {
   color: hsl(257deg, 40%, 49%);
+  font-style: oblique;
+  text-decoration: none;
 }
 body .container footer .socials {
   display: flex;
@@ -110,4 +114,6 @@ body .container footer .socials svg {
 body .container footer .socials svg:hover {
   cursor: pointer;
   border-radius: 0;
+  fill: hsl(300deg, 69%, 71%);
+  border-color: hsl(300deg, 69%, 71%);
 }/*# sourceMappingURL=style.css.map */
