@@ -1,0 +1,162 @@
+//colors
+$color_primary_Violet: hsl(257, 40%, 49%);
+$color_primary_SoftMagenta: hsl(300, 69%, 71%);
+//Layouts
+$maxWidth_desktop: 1440px;
+$maxWidth_mobile: 375px;
+//Typography
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap');
+$font_heading_poppins: 'Poppins', sans-serif;
+$font_body_openSans: 'Open Sans', sans-serif;
+
+@mixin font_heading_regular {
+    font-family: $font_heading_poppins;
+    font-weight: 400;
+}
+
+@mixin font_heading_semiBold {
+    font-family: $font_heading_poppins;
+    font-weight: 600;
+}
+
+@mixin font_body_regular {
+    font-family: $font_body_openSans;
+    font-weight: 400;
+}
+
+* {
+    font-size: 16px;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .container {
+        width: 100%;
+        height: 800px;
+        max-width: $maxWidth_desktop;
+        background: url(./images/bg-desktop.svg) no-repeat, $color_primary_Violet;
+        // border: 1px solid red;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+
+        header {
+            width: 100%;
+
+            .logo {
+                padding-left: 2rem;
+                padding-top: 2rem;
+                align-self: flex-start;
+            }
+        }
+
+        .contentBox {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-evenly;
+
+            .landingIllustration {
+                // overflow: hidden;
+                // border: 3px solid blue;
+                padding-left: 4rem;
+            }
+
+            .content {
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: flex-start;
+                // border: 1px solid red;
+                color: #fff;
+                margin-inline: 6rem;
+
+                h1 {
+                    @include font_heading_semiBold();
+                    font-size: 2.5rem;
+                    margin-bottom: 2rem
+                }
+
+                p {
+                    @include font_body_regular();
+                    margin-bottom: 2rem;
+                    padding-right: 2rem;
+                    // font-size: 1.5rem;
+                }
+
+                button {
+                    transition: box-shadow 400ms;
+                    padding: 1rem 3.5rem;
+                    background-color: #fff;
+                    border-radius: 4rem;
+                    @include font_heading_regular();
+                    color: $color_primary_Violet;
+                    border: none;
+                    box-shadow: 0.5rem 0.5rem 1rem #000;
+
+                    &:hover {
+                        cursor: pointer;
+                        box-shadow: -0.5rem -0.5rem 1rem #000;
+
+                    }
+
+                }
+
+            }
+
+        }
+
+        footer {
+            width: 87%;
+            text-align: center;
+            @include font_heading_semiBold();
+
+            .attribution {
+                width: 40%;
+                border-top-left-radius: 2rem;
+                border-top-right-radius: 2rem;
+                background-color: $color_primary_SoftMagenta;
+                color: #fff;
+
+                a {
+                    color: $color_primary_Violet;
+                }
+            }
+
+            .socials {
+                // border: 1px solid green;
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                gap: 1rem;
+
+                svg {
+                    transition: border-radius 400ms;
+                    fill: #fff;
+                    width: 2.5rem;
+                    height: 2.5rem;
+                    border: 1px solid white;
+                    border-radius: 50%;
+                    padding: 0.5rem;
+
+                    &:hover {
+                        cursor: pointer;
+                        border-radius: 0;
+                    }
+                }
+            }
+
+            // border: 1px solid forestgreen;
+        }
+    }
+}

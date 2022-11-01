@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap");
+* {
+  font-size: 16px;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+body .container {
+  width: 100%;
+  height: 800px;
+  max-width: 1440px;
+  background: url(./images/bg-desktop.svg) no-repeat, hsl(257deg, 40%, 49%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+body .container header {
+  width: 100%;
+}
+body .container header .logo {
+  padding-left: 2rem;
+  padding-top: 2rem;
+  align-self: flex-start;
+}
+body .container .contentBox {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-evenly;
+}
+body .container .contentBox .landingIllustration {
+  padding-left: 4rem;
+}
+body .container .contentBox .content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  color: #fff;
+  margin-inline: 6rem;
+}
+body .container .contentBox .content h1 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+body .container .contentBox .content p {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  margin-bottom: 2rem;
+  padding-right: 2rem;
+}
+body .container .contentBox .content button {
+  transition: box-shadow 400ms;
+  padding: 1rem 3.5rem;
+  background-color: #fff;
+  border-radius: 4rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  color: hsl(257deg, 40%, 49%);
+  border: none;
+  box-shadow: 0.5rem 0.5rem 1rem #000;
+}
+body .container .contentBox .content button:hover {
+  cursor: pointer;
+  box-shadow: -0.5rem -0.5rem 1rem #000;
+}
+body .container footer {
+  width: 87%;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+}
+body .container footer .attribution {
+  width: 40%;
+  border-top-left-radius: 2rem;
+  border-top-right-radius: 2rem;
+  background-color: hsl(300deg, 69%, 71%);
+  color: #fff;
+}
+body .container footer .attribution a {
+  color: hsl(257deg, 40%, 49%);
+}
+body .container footer .socials {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1rem;
+}
+body .container footer .socials svg {
+  transition: border-radius 400ms;
+  fill: #fff;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 1px solid white;
+  border-radius: 50%;
+  padding: 0.5rem;
+}
+body .container footer .socials svg:hover {
+  cursor: pointer;
+  border-radius: 0;
+}/*# sourceMappingURL=style.css.map */
