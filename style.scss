@@ -23,7 +23,7 @@ $font_body_openSans: 'Open Sans', sans-serif;
     font-family: $font_body_openSans;
     font-weight: 400;
 }
-
+//Style
 * {
     font-size: 16px;
     padding: 0;
@@ -179,15 +179,18 @@ body {
 
 @media only screen and (max-width: 600px) {
     body {
+        background-color: $color_primary_Violet;
+
         .container {
             max-width: $maxWidth_mobile;
             height: 100%;
             overflow: auto;
             background: url(./images/bg-mobile.svg) no-repeat, $color_primary_Violet;
+            background-size: contain, cover;
 
             header {
                 .logo {
-                    padding: 2rem 2rem;
+                    padding: 2rem 3rem;
                     align-self: flex-start;
 
                     img {
@@ -203,14 +206,19 @@ body {
                 height: 100%;
 
                 .landingIllustration {
-                    width: 100%;
+                    max-width: $maxWidth_mobile;
+                    min-width: none;
+                    height: 20rem;
                     background: url(./images/illustration-mockups.svg) center no-repeat;
                     background-size: contain;
+
                 }
 
                 .content {
                     text-align: center;
                     margin: 0;
+                    width: 100%;
+                    max-width: $maxWidth_mobile;
 
                     h1 {
                         font-size: 2rem;

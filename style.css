@@ -135,14 +135,18 @@ body .container footer .socials svg:hover {
 }
 
 @media only screen and (max-width: 600px) {
+  body {
+    background-color: hsl(257deg, 40%, 49%);
+  }
   body .container {
     max-width: 375px;
     height: 100%;
     overflow: auto;
     background: url(./images/bg-mobile.svg) no-repeat, hsl(257deg, 40%, 49%);
+    background-size: contain, cover;
   }
   body .container header .logo {
-    padding: 2rem 2rem;
+    padding: 2rem 3rem;
     align-self: flex-start;
   }
   body .container header .logo img {
@@ -155,13 +159,17 @@ body .container footer .socials svg:hover {
     height: 100%;
   }
   body .container .contentBox .landingIllustration {
-    width: 100%;
+    max-width: 375px;
+    min-width: none;
+    height: 20rem;
     background: url(./images/illustration-mockups.svg) center no-repeat;
     background-size: contain;
   }
   body .container .contentBox .content {
     text-align: center;
     margin: 0;
+    width: 100%;
+    max-width: 375px;
   }
   body .container .contentBox .content h1 {
     font-size: 2rem;
